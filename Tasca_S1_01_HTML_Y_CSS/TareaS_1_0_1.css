@@ -1,0 +1,181 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  overflow-x: hidden;
+}
+
+.arriba {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  background-color: gray;
+  padding: 30px;
+  margin: 50px 10;
+}
+
+.logo,
+.nav,
+.social {
+  background-color: #ff4136;
+  color: rgb(15, 15, 15);
+  padding: 15px;
+  margin: 5px;
+}
+
+.logo,
+.social {
+  width: 30%;
+}
+
+.nav {
+  width: 70%;
+}
+
+.banner {
+  background-color: rgb(221, 249, 11);
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.centro {
+  display: flex;
+  margin: 10px 0;
+}
+
+.left-column {
+  background-color: gray;
+  padding: 10px;
+  margin-right: 10px;
+  width: 65%;
+}
+
+.right-column {
+  background-color: red;
+  padding: 10px;
+  width: 35%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.article,
+.navegacion {
+  background-color: #0074d9;
+  color: rgb(17, 16, 16);
+  font-weight: bold;
+  padding: 20px;
+  margin: 5px 0;
+}
+
+.publicidad {
+  background-color: #ff851b;
+  padding: 20px;
+  margin: 5px 0;
+}
+.arriba,
+.centro,
+.abajo {
+  background-color: black;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.pie {
+  background-color: #ffdc00;
+  padding: 30px;
+  text-align: left;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .header {
+    background-image: url("header.jpg");
+    background-size: 1024px;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .logo,
+  .nav,
+  .social {
+    width: auto;
+    text-align: left;
+  }
+  .arriba,
+  .centro,
+  .abajo {
+    margin-right: 10px;
+  }
+
+  .centro {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: auto;
+    margin: 5px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .arriba,
+  .centro,
+  .abajo {
+    margin-right: 0px;
+  }
+  .header {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("header.jpg");
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .logo,
+  .nav,
+  .social {
+    width: auto;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .centro {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: auto;
+    margin: 5px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
