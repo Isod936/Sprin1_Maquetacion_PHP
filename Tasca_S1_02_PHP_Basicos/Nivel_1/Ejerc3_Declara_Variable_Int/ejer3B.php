@@ -1,39 +1,40 @@
 <?php
-echo "Introduce un numero:";
-$input1 = (int) readline("Introduce primer numero");
+echo "Bienvenido a calculadora \n";
+
+$input1 = trim(readline("Introduce un numero: "));
 if (!is_numeric($input1)) {
-    echo "El valor introducido no es un numero\n";
+    echo "El numero introducido no es correcto";
     exit;
 }
-$num1 = (int) $input1;
-$input2 = (int) readline("Introduce primer numero");
+$num1 = (float) $input1;
+
+$input2 = trim(readline("Introduce segundo numero: "));
 if (!is_numeric($input2)) {
-    echo "El valor introducido no es un numero\n";
+    echo "El numero introducido no es correcto";
     exit;
 }
-$num2 = (int) $input2;
-$operador = readline("Introduce operacion (+,-,*,/): ");
+$num2 = (float) $input2;
+
+$operador = trim(readline("Introduce operacion (+,-,*,/): "));
+
 switch ($operador) {
-    case '+':
-        $resultado = $num1 + $num2;
-        "resultado :$resultado \n";
+    case "+":
+        echo "Resultado: " . ($num1 + $num2);
         break;
-    case '-':
-        $resultado = $num1 - $num2;
-        "resultado :$resultado \n";
+    case "-":
+        echo "Resultado: " . ($num1 - $num2);
         break;
-    case '*':
-        $resultado = $num1 * $num2;
-        "resultado :$resultado \n";
+    case "*":
+        echo "Resultado: " . ($num1 * $num2);
         break;
-    case '/':
-        if ($num2 == 0) {
-            echo 'No se puede dividir por 0 \n';
+    case "/":
+        if ($num2 == 0.0) {
+            echo "No se puede dividir por 0";
         } else {
-            $resultado = $num1 / $num2;
-            echo "resultado :$resultado \n";
+            echo "Resultado: " . ($num1 / $num2);
         }
         break;
     default:
-        echo 'El operador introducido no es correcto esta calculadora es de novatos';
+        echo "Operador no valido";
+        exit;
 }
