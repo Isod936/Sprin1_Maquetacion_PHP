@@ -19,19 +19,19 @@ $operador = trim(readline("Introduce operacion (+,-,*,/): "));
 
 switch ($operador) {
     case "+":
-        echo "Resultado: " . ($num1 + $num2);
+        echo "Resultado es: " . ($num1 + $num2);
         break;
     case "-":
-        echo "Resultado: " . ($num1 - $num2);
+        echo "Resultado es: " . ($num1 - $num2);
         break;
     case "*":
-        echo "Resultado: " . ($num1 * $num2);
+        echo "Resultado es: " . ($num1 * $num2);
         break;
     case "/":
         if ($num2 == 0.0) {
             echo "No se puede dividir por 0";
         } else {
-            echo "Resultado: " . ($num1 / $num2);
+            echo "Resultado es: " . ($num1 / $num2);
         }
         break;
     default:
