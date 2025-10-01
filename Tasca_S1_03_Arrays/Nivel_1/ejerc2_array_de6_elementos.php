@@ -12,4 +12,6 @@ print_r($array);
 echo "Aqui se ve que el string esta eliminado por el indice. \n\n";
 $array = array_values($array);
 print_r($array);
-echo "Reorganizado";
+echo "Reorganizado \n";
+echo sizeof($array) . " (con sizeof) \n";
+var_export($array);
