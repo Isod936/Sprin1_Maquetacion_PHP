@@ -1,24 +1,27 @@
 <?php
 while (true) {
-    echo "Introduce 'n' para salir o nota para vertificar el grado  : ";
-    $nota1 = str_replace(',', '.', trim(fgets(STDIN)));
+    echo "Introduce 'n' para salir o nota: ";
+    $nota = trim(fgets(STDIN));
 
-    if (strtolower($nota1) === "n") {
-        echo "Hasta luego !\n";
-        exit;
+    if (strtolower($nota) === "n") {
+        echo "Hasta luego!\n";
+        break;
     }
-    $nota = (float) $nota1;
-    if (!is_numeric($nota) || intval($nota) != $nota || $nota < 0 || $nota > 10) {
+
+    if ($nota < 0 || $nota > 10) {
         echo "La nota introducida no es correcta\n";
+        continue;
     }
+
     $porcentaje = ($nota / 10) * 100;
+
     if ($porcentaje >= 60) {
-        echo "El grado de " . $porcentaje . "% es de primera división\n";
+        echo "El grado de $porcentaje% es de primera división\n";
     } elseif ($porcentaje >= 45) {
-        echo "El grado de " . $porcentaje . "% es de segunda división\n";
+        echo "El grado de $porcentaje% es de segunda división\n";
     } elseif ($porcentaje >= 33) {
-        echo "El grado de " . $porcentaje . "% es de tercera división\n";
+        echo "El grado de $porcentaje% es de tercera división\n";
     } else {
-        echo "El grado de " . $porcentaje . "%  el estudiante reprobará\n";
+        echo "El grado de $porcentaje% el estudiante reprobará\n";
     }
 }
