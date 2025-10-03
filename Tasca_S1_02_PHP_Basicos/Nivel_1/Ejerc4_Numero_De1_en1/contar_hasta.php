@@ -2,10 +2,10 @@
 function contar_hasta($maximo = 10, $paso = 1)
 {
     for ($i = 0; $i <= $maximo; $i += $paso) {
-        if ($i == 10) {
-            echo $i . " ";
+        if ($i == 0) {
+            echo "".$i ;
         } else {
-            echo $i . ". ";
+            echo ", ".$i;
         }
     }
 }
