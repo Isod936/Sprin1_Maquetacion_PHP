@@ -1,0 +1,19 @@
+<?php
+session_start();
+
+$username = $_POST['username'];
+$email    = $_POST['email'];
+$edad     = $_POST['edad'];
+
+$_SESSION['username'] = $username;
+$_SESSION['email']    = $email;
+
+echo "<h2>Datos recibidos:</h2>";
+echo "Nombre de usuario: " . htmlspecialchars($username) . "<br>";
+echo "Correo electrónico: " . htmlspecialchars($email) . "<br>";
+echo "Edad: " . htmlspecialchars($edad) . "<br>";
+
+echo "<h3>Datos guardados en sesión:</h3>";
+echo "Usuario en sesión: " . $_SESSION['username'] . "<br>";
+echo "Email en sesión: " . $_SESSION['email'] . "<br>";
+?>
